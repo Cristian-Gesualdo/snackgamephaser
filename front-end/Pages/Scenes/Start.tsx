@@ -20,5 +20,11 @@ export default class Start extends Phaser.Scene {
       .on('pointerdown', (e) => {
         this.scene.start('Game')
       })
+      .on('pointerover', () => {
+        document.body.style.cursor = 'pointer'
+      })
+      .on('pointerout', () => {
+        document.body.style.cursor = 'default'
+      })
   }
 }
